@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*计算输入杯数的小数部分*/
+        function isInteger(c) {
+            return c%1 === 0   /* === 意味着绝对相等，无论数字还是类型 , % 是取余数*/
+        }
+
+        var singlePrice=10;
+        var doubePrice = singlePrice*3/2;
+        var payPrice;
+        count = prompt("请输入购买数量");
+        if (isNaN(count)){
+            document.write("请正确输入购买数量");
+        }
+        else{
+            if (isInteger(count)){
+                /*奇数杯*/
+                if( count%2>0 ){
+                    payPrice = doubePrice*(parseInt(count/2))+singlePrice;
+                    document.write("您要付"+payPrice+"元")
+                }
+                /*偶数杯*/
+                else{
+                    payPrice=doubePrice*count/2;
+                    document.write("您要付"+payPrice+"元")
+                }
+            }
+            else{
+                document.write("必须购买整数杯")
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
