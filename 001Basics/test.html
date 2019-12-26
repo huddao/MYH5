@@ -12,22 +12,42 @@
         html{
             height: 100%;
         }
-        @keyframes myfirst {   /* 规定动画 */
-            from {opacity: 0}
-            to {opacity: 100}
+        @keyframes myfirst {   /* 规定动画,控制显示、消失时间 */
+            0% {opacity: 0}
+            25%  {opacity: 100}
+            50%  {opacity: 0}
+            100% {opacity: 0}
         }
-        h1,p{
+        @keyframes mysecond {   /* 规定动画,控制显示、消失时间 */
+            0% {opacity: 0}
+            50%  {opacity: 0}
+            75%  {opacity: 100}
+            100% {opacity: 0}
+        }
+        /* h1,p{
             animation: myfirst 2s infinite;
+        } */
+        p{
+            font-size: 50px;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            /* animation: myfirst 5s infinite; */
+        }
+        #p1{
+            animation: myfirst 5s infinite;
+        }
+        #p2{
+            animation: mysecond 5s infinite;
         }
     </style>
 </head>
 <body>
-<audio src="bgm/bgm.wav" controls="controls" autoplay="autoplay">
+<audio src="bgm/bgm.wav" controls="controls" autoplay="autoplay"
+loop="loop">
 </audio>
 <h1>静夜思</h1>
-<p>床前明月光，</p>
-<p>疑是地上霜。</p>
-<p>举头望明月，</p>
-<p>低头思故乡。</p>
+<p id="p1">床前明月光，</p>
+<p id="p2">疑是地上霜。</p>
 </body>
 </html>
