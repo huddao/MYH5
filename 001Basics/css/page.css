@@ -13,20 +13,33 @@ page{
 }
 #c{
     background-color: green;
-    animation: c 10s infinite;
+    animation: c 5s infinite;
 }
 #x{
     background-color: red;
-    animation: x 10s infinite;
+    animation: x 5s infinite;
 }
 #q{
-    background-color: yellow;
-    animation: q 10s infinite;
+    background-image: url("../images/22023450.jpg");
+    background-size: 100% 100%;   /* 控制背景图片的大小，此设置为满屏 */
+    animation: q 5s infinite;
 }
 #d{
     background-color: black;
     color: white;
-    animation: d 10s infinite;
+    animation: d 5s infinite;
+}
+#z{
+    font-size: 36px;
+    display: block;
+    animation: z 5s infinite;
+}
+@keyframes z {
+    0% {opacity: 0}
+    70% {opacity: 0}
+    80% {opacity: 100}
+    90% {opacity: 0}
+    100% {opacity: 0}
 }
 @keyframes c {
     0% {opacity: 0}
