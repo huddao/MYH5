@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bgmBotton{
+            height: 100px;
+            width: 100px;
+            background-image: url("../001Basics/images/22023450.jpg");
+        }
+    </style>
+</head>
+
+<body>
+<audio id="bgm1" src="../001Basics/bgm/bgm.wav" preload="auto" autoplay="autoplay"
+       ></audio>
+    <div id="bgmBotton" onclick="control()"></div>
+
+
+</body>
+<script>
+    function control() {
+        document.getElementById("bgm").onpause();
+    }
+</script>
+</html>

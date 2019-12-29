@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 60px;
+        }
+    </style>
+
+</head>
+<body>
+<p id="message"></p>
+</body>
+</html>
+
+<script>
+    var a = Math.random();
+    var binggo = false;
+
+    a = Math.floor(a * 6) + 1;
+    console.info(a);
+    // document.write("<img src=\"images/" + a + ".png\" />");
+
+    function guess() {
+        var str;
+        var guess = prompt("你猜是多少");
+
+        if (binggo) {   /*bingo默认为ture*/
+            return;
+        }
+
+        if (!Number.isInteger(guess / 1)||guess>6||guess<1) {
+            document.getElementById("message").innerHTML = "您的输入应为1~6的整数";
+            return;
+        }
+
+        if (guess == a) {
+            str = "您猜对了";
+            // document.write("您猜对了");
+            binggo = ture;
+        } else if (guess < a) {
+            str = "您猜小了";
+            // document.write("您猜小了");
+        } else {
+            str = "您猜大了";
+            // document.write("您猜大了");
+        }
+
+        document.getElementById("message").innerHTML = str;
+    }
+
+    guess();
+    guess();
+    guess();
+</script>
