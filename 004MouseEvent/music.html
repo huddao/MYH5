@@ -20,8 +20,16 @@
 
 </body>
 <script>
+    var isplaying = "ture";
     function control() {
-        document.getElementById("bgm").onpause();
+        if(document.getElementById("bgm1").paused){
+            document.getElementById("bgm1").play();
+            isplaying = !isplaying;
+        }
+        else{
+            document.getElementById("bgm1").pause();
+            isplaying = !isplaying;
+        }
     }
 </script>
 </html>
